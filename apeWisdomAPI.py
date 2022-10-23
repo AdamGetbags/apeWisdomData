@@ -36,10 +36,8 @@ if numPages > 1:
 # loop through pages 2 through numPages    
     for i in range(2, numPages+1):
         time.sleep(.1)
-# increment pageNbr
-        pageNbr += 1 
 # build url
-        url = f'https://apewisdom.io/api/v1.0/filter/{filterName}/page/{pageNbr}'
+        url = f'https://apewisdom.io/api/v1.0/filter/{filterName}/page/{i}'
 # make get request
         res = requests.get(url)
 # convert to dataframe
